@@ -19,8 +19,8 @@ import {
   ExporterBuffer,
   Span as OCSpan,
   SpanContext,
-} from '@opencensus/core';
-import { logger, Logger } from '@opencensus/core';
+} from '@iris_finance/opencensus_core';
+import { logger, Logger } from '@iris_finance/opencensus_core';
 import { auth as globalAuth, GoogleAuth, JWT } from 'google-auth-library';
 import { google } from 'googleapis';
 import { getDefaultResource } from './common-utils';

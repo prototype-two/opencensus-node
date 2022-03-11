@@ -26,7 +26,7 @@ import {
   MetricDescriptorType,
   TimeSeriesPoint,
   Timestamp,
-} from '@opencensus/core';
+} from '@iris_finance/opencensus_core';
 import * as os from 'os';
 import * as path from 'path';
 import {

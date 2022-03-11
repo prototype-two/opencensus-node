@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-import { Labels } from '@opencensus/core';
-import * as resource from '@opencensus/resource-util';
+import { Labels } from '@iris_finance/opencensus_core';
+import * as resource from '@iris_finance/opencensus_resource-util';
 import {
   CLOUD_RESOURCE,
   CONTAINER_RESOURCE,
   HOST_RESOURCE,
   K8S_RESOURCE,
-} from '@opencensus/resource-util';
+} from '@iris_finance/opencensus_resource-util';
 import { MonitoredResource } from './types';
 
 const STACKDRIVER_PROJECT_ID_KEY = 'project_id';

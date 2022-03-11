@@ -23,7 +23,7 @@ import {
   MetricDescriptorType,
   TimeSeriesPoint,
   Timestamp,
-} from '@opencensus/core';
+} from '@iris_finance/opencensus_core';
 import * as assert from 'assert';
 import { getDefaultResource } from '../src/common-utils';
 import { StackdriverStatsExporter } from '../src/stackdriver-monitoring';

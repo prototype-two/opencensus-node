@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import * as coreTypes from '@opencensus/core';
+import * as coreTypes from '@iris_finance/opencensus_core';
 import * as assert from 'assert';
 import {
   createAttributes,

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import * as coreTypes from '@opencensus/core';
+import * as coreTypes from '@iris_finance/opencensus_core';
 import * as types from './types';
 
 const AGENT_LABEL_KEY = 'g.co/agent';
