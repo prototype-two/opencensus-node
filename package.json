@@ -1,10 +1,10 @@
 {
-  "name": "@opencensus/opencensus-base",
+  "name": "@iris_finance/opencensus-base",
   "version": "0.0.1",
-  "description": "OpenCensus is a toolkit for collecting application performance and behavior data.",
+  "description": "A fork of OpenCensus",
   "main": "build/src/index.js",
   "types": "build/src/index.d.ts",
-  "repository": "census-instrumentation/opencensus-node",
+  "repository": "prototype-two/opencensus-node",
   "scripts": {
     "fix": "lerna run fix",
     "postinstall": "npm run bootstrap",
@@ -24,7 +24,7 @@
     "metrics",
     "stats"
   ],
-  "author": "Google Inc.",
+  "author": "Iris",
   "license": "Apache-2.0",
   "engines": {
     "node": ">=8"
