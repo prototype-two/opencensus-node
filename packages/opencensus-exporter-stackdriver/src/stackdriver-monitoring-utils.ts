@@ -108,6 +108,16 @@ export function createTimeSeriesList(
   return timeSeriesList;
 }
 
+export function partitionList(list: TimeSeries[], chunkSize: number): TimeSeries[][] {
+  const results = [];
+
+  while (list.length) {
+    results.push(list.splice(0, chunkSize));
+  }
+
+  return results;
+}
+
 /** Creates Metric type. */
 function createMetricType(name: string, metricPrefix: string): string {
   return path.join(metricPrefix, name);

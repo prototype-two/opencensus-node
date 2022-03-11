@@ -34,6 +34,7 @@ import { getDefaultResource } from './common-utils';
 import {
   createMetricDescriptorData,
   createTimeSeriesList,
+  partitionList,
 } from './stackdriver-monitoring-utils';
 import {
   MonitoredResource,
@@ -48,6 +49,7 @@ const OC_USER_AGENT = {
 const OC_HEADER = {
   'x-opencensus-outgoing-request': 0x1,
 };
+const MAX_BATCH_EXPORT_SIZE = 199;
 
 google.options({ headers: OC_HEADER });
 const monitoring = google.monitoring('v3');
@@ -187,6 +189,12 @@ export class StackdriverStatsExporter implements StatsEventListener {
       return Promise.resolve();
     }
 
+    let batches = partitionList(timeSeries, MAX_BATCH_EXPORT_SIZE);
+
+    return Promise.all(batches.map(this.createSingleBatchOfTimeseries));
+  }
+
+  private async createSingleBatchOfTimeseries(timeSeries: TimeSeries[]) {
     return this.authorize().then(authClient => {
       const request = {
         name: `projects/${this.projectId}`,
