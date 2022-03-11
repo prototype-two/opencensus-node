@@ -190,8 +190,13 @@ export class StackdriverStatsExporter implements StatsEventListener {
     }
 
     let batches = partitionList(timeSeries, MAX_BATCH_EXPORT_SIZE);
+    let promises = [];
 
-    return Promise.all(batches.map(this.createSingleBatchOfTimeseries));
+    for(let batch of batches) {
+      promises.push(this.createSingleBatchOfTimeseries(batch));
+    }
+
+    return Promise.all(promises);
   }
 
   private async createSingleBatchOfTimeseries(timeSeries: TimeSeries[]) {
