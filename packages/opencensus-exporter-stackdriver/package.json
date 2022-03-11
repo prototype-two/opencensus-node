@@ -65,7 +65,7 @@
     "typescript": "3.9.10"
   },
   "dependencies": {
-    "@opencensus/core": "^0.1.0",
+    "@iris_finance/opencensus_core": "^0.1.0",
     "@opencensus/resource-util": "^0.1.0",
     "google-auth-library": "^6.1.6",
     "googleapis": "67.0.0"

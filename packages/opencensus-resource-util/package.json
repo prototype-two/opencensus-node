@@ -62,7 +62,7 @@
     "typescript": "3.9.10"
   },
   "dependencies": {
-    "@opencensus/core": "^0.1.0",
+    "@iris_finance/opencensus_core": "^0.1.0",
     "gcp-metadata": "^4.3.0"
   }
 }
