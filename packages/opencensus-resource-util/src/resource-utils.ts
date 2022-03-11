@@ -19,7 +19,7 @@
  * where the application is running.
  */
 
-import { Labels, Resource } from '@opencensus/core';
+import { Labels, Resource } from '@iris_finance/opencensus_core';
 import * as gcpMetadata from 'gcp-metadata';
 import * as http from 'http';
 import * as os from 'os';

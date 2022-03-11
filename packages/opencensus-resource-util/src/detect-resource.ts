@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import { CoreResource, Resource } from '@opencensus/core';
+import { CoreResource, Resource } from '@iris_finance/opencensus_core';
 import {
   getAwsEC2Resource,
   getComputerEngineResource,

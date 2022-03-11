@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { CoreResource } from '@opencensus/core';
+import { CoreResource } from '@iris_finance/opencensus_core';
 import * as assert from 'assert';
 import {
   BASE_PATH,
